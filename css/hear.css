@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(245, 245, 245);
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.movement {
+    overflow: hidden;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    font-style: normal;
+}
+
+/* 头部开始 */
+.top {
+    width: 100%;
+    background: rgb(36, 41, 44);
+    height: 90px;
+    color: #fff;
+}
+
+.wrap {
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    height: inherit;
+    line-height: inherit;
+}
+
+.log {
+    float: left;
+    height: 90px;
+}
+
+.log img {
+    float: left;
+    margin-top: 25px;
+    border: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.flag-word {
+    float: left;
+    margin: 22px 0 0 15px;
+}
+
+.flag-word>strong {
+    font-size: 24px;
+    letter-spacing: 13px;
+    font-family: 幼圆;
+}
+
+.flag-word>strong:after {
+    content: "";
+    display: block;
+    border-top: 2px solid #fff;
+    width: 100px;
+    margin: 2px 0;
+}
+
+.flag-word>h3 {
+    font-size: 11px;
+    margin-left: -4px;
+    font-family: 幼圆;
+}
+
+.ul {
+    float: left;
+    font-size: 16px;
+    height: 90px;
+    width: 610px;
+    margin-left: 40px;
+}
+
+.ul ul li {
+    height: 90px;
+    line-height: 90px;
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+.ul ul li a {
+    color: #ffffff;
+    padding: 2px 9px;
+    margin-right: 9px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.all_change {
+    background: #109d59;
+    border-radius: 3px;
+    padding: 2px 9px;
+}
+
+.all_change::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    border-top: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid #fff;
+    border-left: 11px solid transparent;
+}
+
+.ul ul li a:hover,
+.login-register>a:hover {
+    color: #109d59;
+}
+
+.ul ul li a:hover,
+.all_change>a:hover {
+    color: #fff;
+}
+
+.topright {
+    float: right;
+    font-size: 14px;
+    height: 90px;
+    line-height: 90px;
+}
+
+.search {
+    float: left;
+    position: relative;
+}
+
+#infinitySearch {
+    width: 170px !important;
+    height: 27px !important;
+    background: #000;
+    border: none !important;
+    border-radius: 20px !important;
+    padding-left: 15px !important;
+    box-sizing: border-box !important;
+    color: #16A085 !important;
+    font-size: 18px !important;
+    outline: none;
+}
+
+#search-button {
+    position: absolute;
+    top: 31px;
+    right: 0;
+    width: 30px;
+    height: 27px;
+    border-radius: 0 40px 40px 0;
+    -webkit-transition: all .2s ease;
+    line-height: 27px;
+    text-align: center;
+    margin-right: -2px;
+    background: #2ECC71 url(../images/searchIcon_06.png) no-repeat center;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background: #2aa756 url(../images/searchIcon_06.png) no-repeat center;
+}
+
+.login-register {
+    float: left;
+    margin-left: 20px;
+    word-spacing: 5px;
+    position: relative;
+}
+
+.login-register>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login-register_hide {
+    position: absolute;
+    top: 90px;
+    left: -52px;
+    padding: 10px 0;
+    z-index: 99990;
+    width: 120px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.login-register>i {
+    display: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 70px;
+    left: 35px;
+    border-top: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid #fff;
+    border-left: 11px solid transparent;
+    font-style: normal;
+}
+
+.login-register_hide>ul a {
+    display: block;
+    line-height: 30px;
+    color: #3a3a3a;
+    text-indent: 18px;
+    text-decoration: none;
+}
+
+.top .login-register:hover>i,
+.top .login-register:hover>.login-register_hide {
+    display: block;
+}
+
+.login-register_hide>ul a:hover {
+    background: #eee;
+}
+
+/* 头部结束 */
+
+/* 左边导航开始 */
+.hear_left {
+    position: fixed;
+    left: 0;
+    top: 260px;
+    width: 54px;
+    height: 200px;
+    background-color: #109d59;
+}
+
+.hear_left_content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.hear_left_content>a {
+    display: block;
+    margin: 15px auto;
+    width: 20px;
+    height: 15px;
+    background-image: url(../images/image/listenSpeak/spriteicon.png);
+    text-align: center;
+}
+
+.ts-leftnav-tab1 {
+    background-position: 3px -57px;
+}
+
+.ts-leftnav-tab2 {
+    background-position: 0 -135px;
+}
+
+.ts-leftnav-tab3 {
+    background-position: 4px -22px;
+}
+
+.ts-leftnav-tab4 {
+    background-position: 3px -42px;
+}
+
+.ts-leftnav-tab5 {
+    background-position: 3px -87px;
+}
+
+.ts-leftnav-tab6 {
+    background-position: 3px -102px;
+}
+
+/* 左边导航结束 */
+
+
+/* 搜索条开始 */
+.searchbar {
+    width: 100%;
+    height: 75px;
+    background: #fff;
+}
+
+.searchbar_left {
+    width: 90px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    float: left;
+}
+
+.searchbar_left>span {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.searchbar_content {
+    width: 990px;
+    height: 75px;
+    float: left;
+    text-align: center;
+}
+
+.searchbar_content>span {
+    display: block;
+    width: 100%;
+    font-size: 0px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.searchbar_content_top>i {
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-style: normal;
+}
+
+.ts-navbtn-l {
+    display: block;
+    float: left;
+    margin-top: 5px;
+    margin-left: 35px;
+    width: 10px;
+    height: 20px;
+    background: url(../images/image/listenSpeak/arrowL.png) 0 0 no-repeat;
+    cursor: pointer;
+}
+
+.searchbar_content_bottom>span {
+    display: inline-block;
+    white-space: nowrap;
+    width: 900px;
+    overflow: hidden;
+}
+
+.searchbar_content_bottom>span>a:nth-child(1) {
+    color: #109d59;
+}
+
+.searchbar_content_bottom>span>a {
+    font-size: 14px;
+    display: inline-block;
+    width: 54px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    padding: 0 8px;
+    color: #000;
+}
+
+.ts-navbtn-r {
+    display: block;
+    margin-top: 5px;
+    margin-right: 35px;
+    float: right;
+    width: 10px;
+    height: 20px;
+    background: url(../images/image/listenSpeak/arrowR.png) 2px 0 no-repeat;
+    cursor: pointer;
+}
+
+.on {
+    background-color: #248675;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.searchbar_right {
+    float: right;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 1px solid #109d59;
+    cursor: pointer;
+}
+
+.tsfb-btn {
+    display: inline-block;
+    margin: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #109d59;
+    text-align: center;
+}
+
+.tsfb-btn>i {
+    background: url(../images/image/listenSpeak/pencil.png) 0 -1px no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 6px;
+}
+
+/* 搜索条结束 */
+
+
+/* 中间部分开始 */
+.hear_content {
+    width: 1224px;
+    height: 1024px;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 200px;
+}
+
+.hear_content>.card {
+    border-radius: 5px;
+    width: 280px;
+    margin: 0 10px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: left;
+}
+
+.card_header {
+    height: 80px;
+    width: 100%;
+    text-align: left;
+}
+
+.card>img {
+    width: 100%;
+}
+
+.card_foot {
+    margin-top: 15px;
+    height: auto;
+    width: 100%;
+}
+
+.touxiang {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    padding-top: 14px;
+}
+.card_name {
+    display: inline-block;
+    width: 164px;
+    text-align: left;
+    vertical-align: top;
+}
+.card_name>p {
+    font-weight: normal;
+    font-size: 16px;
+    color: #131719;
+    display: block;
+    margin-top: 15px;
+}
+.card_name>em {
+    font-size: 12px;
+    color: #999999;
+    font-style: normal;
+}
+.card_header>i{
+    color: rgb(176, 226, 129);
+    border: 1px solid rgb(176, 226, 129);
+    display: inline-block;
+    font-size: 14px;
+    width: 48px;
+    height: 20px;
+    border-radius: 10px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 15px;
+    font-style: normal;
+}
+.card_foot>p {
+    padding-top: 16px;
+    font-size: 14px;
+    padding-left: 10px;
+    color: #4c4c4c;
+}
+.ts-cardfoot-icon {
+    display: block;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #cccccc;
+}
+.ts-cardicon1 {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/image/listenSpeak/spriteicon.png) 0 -73px no-repeat;
+    cursor: pointer;
+}
+.ts-cardicon2 {
+    display: inline-block;
+    width: 20px;
+    height: 14px;
+    background: url(../images/image/listenSpeak/spriteicon.png) 0 -150px no-repeat;
+    cursor: pointer;
+}
+.ts-cardfoot-icon>i {
+    padding: 5px;
+    color: #ccc;
+    font-style: normal;
+}
+.ts-page {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    -moz-user-select: none;
+}
+.ts-page span {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 4px;
+    box-shadow: 0px 2px 3px gray;
+}
+.ts-page span.disable {
+    cursor: not-allowed;
+    color: #333;
+}
+.ts-page .page.on {
+    background-color: #109d59;
+    color: #fff;
+}
+.ts-page .tspage-ell {
+    cursor: auto;
+    background-color: #f2f2f2;
+    box-shadow: none;
+    margin: 0;
+} 
+/* 中间部分结束 */
+
+/* 底部开始 */
+.footer{
+   width: 100%;
+    background-color: #fff;
+    height: 160px;
+    overflow: hidden;
+}
+.footer_left{
+    float: left;
+    width: 46%;
+}
+.footer_right{
+    float: right;
+    width: 530px;
+    margin-top: 16px
+}
+.footer_left>span{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.footer_left>p{
+    text-align: left;
+    margin-top: 5px;
+    width: 100%;
+}
+.footer_left>p>a{
+    color: #808080;
+    padding-right: 3px;
+    margin-top: 4px;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+}
+.weibo,.weixin,.connect{
+    display: inline-block;
+    margin: 0 3px;
+}
+.connect{
+    float: right;
+    width: 62%;
+    margin-right: 0;
+}
+.weibo>img,.weixin>img{
+    border: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.weibo>span,.weixin>span{
+    color: #808080;
+    font-size: 12px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.connect>p{
+    line-height: 14px;
+    font-size: 12px;
+    color: #707070;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.connect>p>i{
+    font-style: normal;
+}
+.footer_bottom{
+    width: 100%;
+    background-color: #fff;
+    height: 100px;
+    border-top: 1px solid #e6e6e6;
+}
+.footer_bottom_content{
+    width: 400px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.footer_bottom_content>span{
+    width: 20%;
+    text-align: center;
+    display: block;
+    float: left;
+}
+.footer_bottom_content>span>a{
+    font-size: 14px;
+    color: #4c4c4c;
+    text-decoration: none;
+}
+.footer_bottom_content>p{
+    width: 100%;
+    margin: 25px auto;
+    text-align: center;
+}
+.bottom-foot>em{
+    font-style: normal;
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    margin: 0 10px;
+}
+/* 底部结束 */
